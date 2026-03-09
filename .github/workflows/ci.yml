@@ -14,9 +14,11 @@ jobs:
 
     - name: Setup Python
       uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
 
     - name: Install Dependencies
       run: pip install flask
 
-    - name: Check Python syntax
-  run: python -m py_compile app.py
+    - name: Check Python Syntax
+      run: python -m py_compile app.py
